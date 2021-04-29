@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function passByReference(obj) {
+    var temp;
+    temp = obj.x;
+    obj.x = obj.y;
+    obj.y = temp;
+    document.write("Inside the pass By Reference function");
+    document.write("<br>");
+    document.write("x="+obj.x);
+    document.write("<br>");
+    document.write("y="+obj.y);
+}
+var obj = {
+    x : 10, 
+    y : 20
+}
+document.write(" ");
+document.write("Before calling the pass By Reference function  ");
+document.write("<br>");
+document.write("x="+obj.x);
+    document.write("<br>");
+    document.write("y="+obj.y);
+    document.write("<br>");
+passByReference(obj);
+document.write("<br>");
+document.write("After calling the pass By Reference function  ");
+document.write("<br>");
+document.write("x="+obj.x);
+    document.write("<br>");
+    document.write("y="+obj.y);
+</script>
+
+</body>
+</html>
